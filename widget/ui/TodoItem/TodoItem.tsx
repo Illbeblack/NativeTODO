@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
-import { Colors, Fonts, Gaps, Radius } from '../tokens';
-import CustomButton from '../CustomButton/CustomButton';
+import { Colors, Fonts, Gaps, Radius } from '../../../shared/tokens';
+import CustomButton from '../../../shared/CustomButton/CustomButton';
 import { useTodos } from '@/entities/store/useTodo';
-import CustomLink from '../CustomLink/CustomLink';
+import CustomLink from '../../../shared/CustomLink/CustomLink';
 import { useId } from '@/entities/store/useId';
 
 export default function TodoItem({ todo }: any) {

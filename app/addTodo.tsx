@@ -1,8 +1,10 @@
 import { useTodos } from '@/entities/store/useTodo';
 import CustomSubmit from '@/shared/CustomSubmit/CustomSubmit';
+import Header from '@/shared/Header/Header';
+import Input from '@/shared/Input/Input';
 import { Colors, Fonts, Gaps, Radius } from '@/shared/tokens';
 import { useState } from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default function AddTodo() {
   const [createTodo] = useTodos((state) => [state.createTodo]);
@@ -22,22 +24,10 @@ export default function AddTodo() {
   }
   return (
     <View>
-      <Text style={styles.title}>ADD TODO</Text>
+      <Header header="ADD TODO" />
       <View style={styles.container}>
-        <TextInput
-          style={styles.input}
-          value={title}
-          onChangeText={setTitle}
-          placeholder="New Task"
-          placeholderTextColor={'#AFB2BF'}
-        />
-        <TextInput
-          style={styles.input}
-          value={text}
-          onChangeText={setText}
-          placeholder="About Task"
-          placeholderTextColor={'#AFB2BF'}
-        />
+        <Input value={title} onChangeText={setTitle} placeholder="New Task" />
+        <Input value={text} onChangeText={setText} placeholder="About Task" />
         <CustomSubmit href={'/'} lable="ADD" onPress={() => addTask()} />
       </View>
     </View>
@@ -53,21 +43,5 @@ const styles = StyleSheet.create({
     padding: 20,
     marginBottom: 20,
     gap: Gaps.g20,
-  },
-  title: {
-    color: Colors.primary,
-    alignSelf: 'center',
-    marginBottom: 50,
-    fontFamily: Fonts.semibold,
-    fontSize: Fonts.f18,
-  },
-  input: {
-    height: 40,
-    borderWidth: 1,
-    borderColor: Colors.gray,
-    padding: 10,
-    fontFamily: Fonts.regular,
-    fontSize: Fonts.f14,
-    color: Colors.white,
   },
 });

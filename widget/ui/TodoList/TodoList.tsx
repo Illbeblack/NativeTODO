@@ -1,6 +1,6 @@
 import { useTodos } from '@/entities/store/useTodo';
 import CustomLink from '@/shared/CustomLink/CustomLink';
-import TodoItem from '@/shared/TodoItem/TodoItem';
+import TodoItem from '@/widget/ui/TodoItem/TodoItem';
 import { Gaps } from '@/shared/tokens';
 import { useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';

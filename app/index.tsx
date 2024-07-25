@@ -1,12 +1,13 @@
+import Header from '@/shared/Header/Header';
 import { Colors, Fonts } from '@/shared/tokens';
-import TodoList from '@/widget/ui/TodoList';
+import TodoList from '@/widget/ui/TodoList/TodoList';
 import { Modal, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function MainPage() {
   return (
     <View>
       <ScrollView>
-        <Text style={styles.title}>TODO LIST</Text>
+        <Header header="TODO LIST" />
         <TodoList />
       </ScrollView>
     </View>

@@ -10,7 +10,7 @@ export interface Todo {
 export interface TodoStore {
   todos: Todo[];
   createTodo: (title: string, text?: string) => void;
-  updateTodo: (id: number, title: string, text?: string) => void;
+  updateTodo: (id: number, title: string, text?: string, completed?: boolean) => void;
   removeTodo: (id: number) => void;
   toggleCompleted: (id: number) => void;
 }
@@ -32,13 +32,14 @@ export const useTodos = create<TodoStore>((set, get) => ({
     set({ todos: todos.concat(newTodo) });
   },
 
-  updateTodo: (id, title, text?) => {
+  updateTodo: (id, title, text?, completed?) => {
     const { todos } = get();
     set({
       todos: todos.map((todo) => ({
         ...todo,
         title: todo.id === id ? title : todo.title,
         text: todo.id === id && text ? text : todo.text,
+        completed: todo.id === id && completed ? completed : todo.completed,
       })),
     });
   },
@@ -49,6 +50,7 @@ export const useTodos = create<TodoStore>((set, get) => ({
       todos: todos.filter((todo) => todo.id !== id),
     });
   },
+
   toggleCompleted: (id: number) => {
     const { todos } = get();
     set({
