@@ -1,50 +1,30 @@
-# Welcome to your Expo app 👋
+# Добро пожаловать в приложение nativeTODO 👋
+ Создано простое приложение на React Native для управления списком задач (To-Do List). 
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Требования:
 
-## Get started
+ 1 Главный экран:
+ • Отображение списка задач - выполнено
+ • Возможность добавлять новые задачи - выполнено
+ • Возможность изменять существующие задачи - выполнено
+ • Возможность удалять задачи - выполнено
+ • Возможность отмечать задачи как выполненные/невыполненные - выполнено
 
-1. Install dependencies
+ 2 Добавление и редактирование задач:
+ • Открытие модального окна для добавления новой задачи или редактирования существующей. Задача должна содержать:
+ • Название
+ • Описание
+ • Статус (выполненная/невыполненная)
 
-   ```bash
-   npm install
-   ```
+- При выборе редактирования задачи, есть опция отметить его как выполненое и наоборот, однако при создании новой задачи такая опция отсутствует, так как с точки зрения юзабилити и с точки зрения задач, для которых используются данные приложения, редкий пользователь в список задачь добавляет заведомо выполненные. Данная опция может быть добавлена в случае необходимости.
 
-2. Start the app
+ 3 Сохранение данных:
+ • Все данные должны сохраняться локально на устройстве с использованием Zustand  - выполнено
 
-   ```bash
-    npx expo start
-   ```
+## Использование
 
-In the output, you'll find options to open the app in a
+Для копирования и тестирования кода можно использовать репозиторий, код находится в ветке master.
+Так же весь код можно скачать использую google Диск, перейдя по ссылке 
+Для тестировния приложения стоит установить все зависимости введя в терминале команду npm i  и запустив на устройстве эмулятор.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Перейдя по ссылке можно посмотреть видео с приложением и его функционалом.
